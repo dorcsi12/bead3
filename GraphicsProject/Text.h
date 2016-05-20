@@ -13,6 +13,12 @@ public:
     bool contains(int x, int y) override;
     virtual void handle(genv::event) override;
     void setTexti(std::string s);
+    std::string tostring(int a);
+    int toint(std::string t);
+    void up(genv::event);
+    void up_down_draw();
+    void down(genv::event);
+
 
 protected:
 

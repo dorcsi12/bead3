@@ -41,7 +41,7 @@ void Application::run() {
         for(unsigned int j=0; j<adatok.size(); j++) {
             Text* t = new Text(100+b,50+a,50,50,adatok[i][j]);
             t->irhatoe=false;
-            a=a+52
+            a=a+52;
             w.push_back(t);
             c++;
         }
@@ -50,7 +50,7 @@ void Application::run() {
 
     for(unsigned int i=0; i<adatok.size(); i++) {
         d=rand() %w.size();
-        w[d]->setTexti(" ");
+        w[d]->setTexti("0");
         w[d]->irhatoe=true;
         ures_index.push_back(d);
     }

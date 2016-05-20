@@ -43,16 +43,17 @@
 1463660047 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\edittext.h
 	"Text.h"
 
-1463765270 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.h
+1463774958 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.h
 	<string>
 	"Widget.h"
 
 1463765483 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\widget.h
 	"graphics.hpp"
 
-1463769384 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.cpp
+1463774432 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.cpp
 	"Text.h"
 	"graphics.hpp"
+	<sstream>
 
 1463765263 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\widget.cpp
 	"Widget.h"
@@ -69,7 +70,7 @@
 	<vector>
 	<iostream>
 
-1463768680 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.cpp
+1463770832 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.cpp
 	"Application.h"
 
 1463765689 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.h
