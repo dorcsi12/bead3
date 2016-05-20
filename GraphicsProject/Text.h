@@ -16,7 +16,6 @@ public:
 
 protected:
 
-
 private:
     std::string _text;
 };

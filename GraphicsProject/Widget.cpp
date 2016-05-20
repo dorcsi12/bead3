@@ -8,7 +8,12 @@ Widget::~Widget()
 
 int Widget::x() {return _x;}
 int Widget::y() {return _y;}
-
+int Widget:: getSx(){
+return sx;
+}
+int Widget:: getSy(){
+return sy;
+}
 using namespace genv;
 
 void Widget::handle(event ev){

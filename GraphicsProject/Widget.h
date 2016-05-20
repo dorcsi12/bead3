@@ -11,7 +11,9 @@ public:
     virtual void handle(genv::event);
     virtual bool contains(int x, int y) = 0;
     virtual void setTexti(std::string s)=0;
-        bool irhatoe;
+    bool irhatoe;
+    int getSx();
+    int getSy();
 protected:
     bool focused;
     int sx,sy;

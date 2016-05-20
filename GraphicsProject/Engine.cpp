@@ -33,7 +33,7 @@ void Engine::ellenorzes(std::vector<Widget*> &w, int ind, std::vector<int> ures,
         }
     }
 }
-bool ell(std::vector<Widget*> &w, int i, std::vector<int> ures, std::vector<std::string> sorvektor) {
+bool Engine::ell(std::vector<Widget*> &w, int i, std::vector<int> ures, std::vector<std::string> sorvektor) {
     if(Text* f=dynamic_cast<Text*>(w[ures[i]])) {
         if(sorvektor[ures[i]]!=f->getText()) {
             return true;

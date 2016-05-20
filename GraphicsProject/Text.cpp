@@ -19,6 +19,7 @@ void Text::setText(int t) {
     _text = t;
 }
 
+
 using namespace genv;
 
 void Text::draw() {
@@ -26,12 +27,6 @@ void Text::draw() {
 }
 
 bool Text::contains(int xx, int yy) {
-    /*return x() < xx
-           && xx < x() + gout.twidth(_text)
-           && y() - gout.cascent() < yy
-           && y() + gout.cdescent() > yy;
-           */
-
     if(xx>x() && xx< x()+sx && yy>y() && yy<y()+sy) {
         return true;
     } else {
@@ -42,6 +37,8 @@ void Text::handle(event ev) {
     Widget::handle(ev);
       if(irhatoe) {
           gout<<move_to(x(),y())<<color(255,153,204)<<box(sx,sy);
+          gout<<move_to(x()+sx-(sx/5),y()+(sy/4))<<color(0,0,0)<<text("+")<<
+          move_to(x()+sx-(sx/5),y()+sy/2+(sy/4))<<text("-");
       } else {
           gout<<move_to(x(),y())<<color(255,31,143)<<box(sx,sy);
       }
@@ -52,17 +49,6 @@ void Text::handle(event ev) {
                   setText(ev.keycode);
               }
           }
-      }/*
-    if(irhatoe) {
-        gout<<move_to(x(),y())<<color(255,153,204)<<box(sx,sy);
-        if(focused && ev.type == ev_key) {
-            gout<<move_to(x(),y())<<color(92,255,255)<<box(sx,sy);
-            if (49 <= ev.keycode && ev.keycode <= 58) {
-                setText(ev.keycode);
-            }
-        } else {
-            gout<<move_to(x(),y())<<color(255,31,143)<<box(sx,sy);
-        }
-    }*/
+      }
 }
 
