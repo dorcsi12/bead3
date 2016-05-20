@@ -1,5 +1,6 @@
 #include "Application.h"
 #include "graphics.hpp"
+#include "Engine.h"
 #include "Adat.h"
 #include "Widget.h"
 #include "Text.h"
@@ -17,9 +18,9 @@ void Application::background() {
     gout<<move_to(0,0)<<color(0,0,0)<<box(XX,YY);
 }
 
-void Application::jatekvege(){
-gout<<move_to(0,0)<<color(0,0,0)<<box(XX,YY)
-<<move_to(XX/2-gout.twidth("Ügyes vagyok:)"),YY/2)<<color(255,31,143)<<text("Ügyes vagyok:)");
+void Application::jatekvege() {
+    gout<<move_to(0,0)<<color(0,0,0)<<box(XX,YY)
+        <<move_to(XX/2-gout.twidth("Ügyes vagyok:)"),YY/2)<<color(255,31,143)<<text("Ügyes vagyok:)");
 }
 
 void Application::run() {
@@ -29,21 +30,20 @@ void Application::run() {
     event ev;
     Adat a;
     vector<vector<string>>adatok = a.elkeszit();
-    vector<string>fasz;
-    for(int i=0; i<adatok.size(); i++) {
-        for(int j=0; j<adatok.size(); j++) {
-            fasz.push_back(adatok[i][j]);
+    vector<string>sorvektor;
+
+    for(unsigned int i=0; i<adatok.size(); i++) {
+        for(unsigned int j=0; j<adatok.size(); j++) {
+            sorvektor.push_back(adatok[i][j]);
         }
     }
-    vector<int>ures;
+    vector<int>ures_index;
     vector<Widget*>w;
 
-    int b=0;
-    for(int i=0; i<adatok.size(); i++) {
+    for(unsigned int i=0; i<adatok.size(); i++) {
         int a=0;
         int c=0;
-        for(int j=0; j<adatok.size(); j++) {
-
+        for(unsigned int j=0; j<adatok.size(); j++) {
             Text* t = new Text(100+b,50+a,50,50,adatok[i][j]);
             t->irhatoe=false;
             a=a+52;
@@ -52,62 +52,36 @@ void Application::run() {
         }
         b=b+52;
     }
-    for(int i=0; i<8; i++) {
-        int d=rand() %w.size();
+
+    for(unsigned int i=0; i<adatok.size(); i++) {
+        d=rand() %w.size();
         w[d]->setTexti(" ");
         w[d]->irhatoe=true;
-        ures.push_back(d);
-
+        ures_index.push_back(d);
     }
+
     background();
-    for(int i=0; i<adatok.size(); i++) {
-        for(int j=0; j<adatok.size(); j++) {
-            cout<<adatok[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-    bool hiba=true;
-    bool happy=false;//:(
-
-
+    Engine e;
     while(gin >> ev && ev.keycode != key_escape) {
-        for(int i=0; i<w.size(); i++) {
-            if(!happy){
-            w[i]->handle(ev);
-            w[i]->draw();
+        for(unsigned int i=0; i<w.size(); i++) {
+            if(!vege) {
+                w[i]->handle(ev);
+                w[i]->draw();
             }
-            if(Text* t=dynamic_cast<Text*>(w[i])) {
-                if(t->getText()!="") {
-                    for(int i=0; i<w.size(); i++) {
-                        if(Text* tt=dynamic_cast<Text*>(w[i])) {
-                            if(tt->getText()=="") {
-                                hiba=true;
-                                break;
-                            } else {
-                                hiba=false;
-                            }
-                        }
-                    }
-                    if (!hiba) {
-                        for(int i=0; i<ures.size(); i++) {
-                            if(Text* f=dynamic_cast<Text*>(w[ures[i]])) {
-                                if(fasz[ures[i]]==f->getText()) {
-                                    happy=true;
-                                }
-                                else{
-                                    happy = false;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-
-                }
-            }
+            e.ellenorzes(w,i,ures_index,vege,sorvektor);
         }
-        if(happy&& ev.type!=ev_mouse && ev.keycode==key_enter){
-            jatekvege();
+        for(unsigned int i=0; i<ures.size(); i++) {
+            bool rossze = e->ell(w,i,ures_index,vege,sorvektor);
+            if(rossze) {
 
+
+            }
+
+        }
+
+
+        if(vege&& ev.type!=ev_mouse && ev.keycode==key_enter) {
+            jatekvege();
         }
 
         gout<<refresh;

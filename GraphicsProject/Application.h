@@ -9,6 +9,9 @@ public:
     virtual void jatekvege();
 protected:
     int XX, YY;
+    bool vege=false;
+    int b=0;
+    int d;
 private:
 };
 
