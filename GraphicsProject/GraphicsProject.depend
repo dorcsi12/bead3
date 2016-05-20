@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1463741110 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\main.cpp
+1463778055 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\main.cpp
 	"Application.h"
 
 1330557110 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\include\graphics.hpp
@@ -43,14 +43,14 @@
 1463660047 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\edittext.h
 	"Text.h"
 
-1463774958 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.h
+1463777835 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.h
 	<string>
 	"Widget.h"
 
-1463765483 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\widget.h
+1463776764 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\widget.h
 	"graphics.hpp"
 
-1463774432 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.cpp
+1463777967 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.cpp
 	"Text.h"
 	"graphics.hpp"
 	<sstream>
@@ -58,7 +58,7 @@
 1463765263 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\widget.cpp
 	"Widget.h"
 
-1463651031 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\adat.cpp
+1463777824 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\adat.cpp
 	"Adat.h"
 	<iostream>
 	<vector>
@@ -66,14 +66,14 @@
 	<cstdlib>
 	<time.h>
 
-1463649085 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\adat.h
+1463777812 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\adat.h
 	<vector>
 	<iostream>
 
-1463770832 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.cpp
+1463780566 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.cpp
 	"Application.h"
 
-1463765689 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.h
+1463779674 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.h
 	"graphics.hpp"
 	"Engine.h"
 	"Adat.h"
@@ -84,10 +84,10 @@
 	<cstdlib>
 	<time.h>
 
-1463765804 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\engine.h
+1463777812 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\engine.h
 	"Text.h"
 	<vector>
 
-1463765787 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\engine.cpp
+1463777812 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\engine.cpp
 	"Engine.h"
 
