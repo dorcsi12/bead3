@@ -1,0 +1,84 @@
+# depslib dependency file v1.0
+1463741110 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\main.cpp
+	"Application.h"
+
+1330557110 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\include\graphics.hpp
+	<string>
+
+1463649085 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\include\adat.h
+	<vector>
+	<iostream>
+
+1463651031 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\src\adat.cpp
+	"Adat.h"
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	<time.h>
+
+1463643805 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\src\application.cpp
+	"Application.h"
+
+1463643805 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\include\application.h
+
+1463657572 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\src\textbox.cpp
+	"TextBox.h"
+	"graphics.hpp"
+	"Widgets.h"
+
+1463658852 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\include\textbox.h
+	<string>
+	"Widgets.h"
+
+1463658746 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\include\widgets.h
+	"graphics.hpp"
+
+1463657752 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\src\widgets.cpp
+	"Widgets.h"
+
+1463661495 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\edittext.cpp
+	"EditText.h"
+
+1463660047 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\edittext.h
+	"Text.h"
+
+1463735926 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.h
+	<string>
+	"Widget.h"
+
+1463735925 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\widget.h
+	"graphics.hpp"
+
+1463735925 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\text.cpp
+	"Text.h"
+	"graphics.hpp"
+
+1463660487 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\widget.cpp
+	"Widget.h"
+
+1463651031 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\adat.cpp
+	"Adat.h"
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	<time.h>
+
+1463649085 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\adat.h
+	<vector>
+	<iostream>
+
+1463749003 source:c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.cpp
+	"Application.h"
+	"graphics.hpp"
+	"Adat.h"
+	"Widget.h"
+	"Text.h"
+	<vector>
+	<iostream>
+	<cstdlib>
+	<time.h>
+
+1463741110 c:\users\d-szl_000\desktop\bead3\bead3\graphicsproject\application.h
+

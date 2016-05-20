@@ -1,13 +1,12 @@
-#include "graphics.hpp"
-using namespace genv;
+#include "Application.h"
 
 
-int main()
-{
-    gout.open(400,400);
-    gout <<text("hello world")<< refresh;
-    event ev;
-    while(gin >> ev) {
-    }
+const int XX=600;
+const int YY=600;
+
+
+int main() {
+    Application RUN(XX,YY);
+    RUN.run();
     return 0;
 }

@@ -13,7 +13,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -25,7 +24,6 @@
 					<Add option="-fexpensive-optimizations" />
 					<Add option="-O2" />
 					<Add option="-g" />
-					<Add directory="include" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -42,9 +40,15 @@
 			<Add library="lib\libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
-		<Unit filename="include/Widgets.h" />
+		<Unit filename="Adat.cpp" />
+		<Unit filename="Adat.h" />
+		<Unit filename="Application.cpp" />
+		<Unit filename="Application.h" />
+		<Unit filename="Text.cpp" />
+		<Unit filename="Text.h" />
+		<Unit filename="Widget.cpp" />
+		<Unit filename="Widget.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Widgets.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
